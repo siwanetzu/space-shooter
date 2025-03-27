@@ -8,6 +8,11 @@ pygame.display.set_caption("pygame window")
 clock = pygame.time.Clock()
 running = True
 
+# surface
+
+surf = pygame.Surface((100,200))
+
+
 while running:
     # event loop to close the game
     for event in pygame.event.get():
@@ -18,7 +23,8 @@ while running:
 
     # draw the game
 
-    display_surface.fill(('red'))  # RGB values for red
+    display_surface.fill(('dark grey'))  # RGB values for red
+    display_surface.blit(surf, (100,150))
 
     pygame.display.set_caption('Space Cadet')
     
